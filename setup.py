@@ -133,7 +133,7 @@ def _perform_setup():
     
 def _set_pythonpath():
     python_path = [os.path.realpath(path) for path in ["src", "test"]]
-    os.environ["PYTHONPATH"] = os.pathsep.join(python_path)
+    os.environ["PYTHONPATH"] += os.pathsep.join(python_path)
 
 def _get_config_home():
     win32_config_home = os.path.join(os.path.expanduser("~"), ".repoguard")
